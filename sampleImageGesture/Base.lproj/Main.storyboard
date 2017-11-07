@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sampleImageGesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doraemon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="C3l-ec-oWH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qa3-yb-Gps" appends="YES" id="SHd-X8-nko"/>
+                                    <outletCollection property="gestureRecognizers" destination="OXy-Ue-EFA" appends="YES" id="w2S-bP-OIA"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C3l-ec-oWH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1SF-fU-Nfi"/>
+                            <constraint firstItem="C3l-ec-oWH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FFK-ET-7Hp"/>
+                            <constraint firstItem="C3l-ec-oWH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XMZ-VX-kPz"/>
+                            <constraint firstAttribute="trailing" secondItem="C3l-ec-oWH" secondAttribute="trailing" id="kIe-1a-6ac"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="C3l-ec-oWH" id="yZJ-t7-zc8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qa3-yb-Gps">
+                    <connections>
+                        <action selector="actionTapped:" destination="BYZ-38-t0r" id="R1V-Ax-BYf"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="OXy-Ue-EFA">
+                    <connections>
+                        <action selector="actionSwipe:" destination="BYZ-38-t0r" id="QVb-l7-9oE"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-80.625" y="132.04225352112675"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doraemon.jpg" width="207" height="243"/>
+    </resources>
+</document>
